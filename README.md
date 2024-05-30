@@ -24,6 +24,7 @@ Information:
 - You can compile files to .exe using auto-py-to-exe.
 > [!NOTE]
 > The bot host is a computer for remote access.
+
 > [!CAUTION]
 > Use this program for testing purposes only.
 All responsibility lies with you.
