@@ -2,16 +2,21 @@ import cv2
 import telebot
 import time
 import os
-import logging
-logging.basicConfig(level=logging.INFO, filename="logs.log",filemode="w", format="%(asctime)s %(levelname)s %(message)s")
+import logging
 import keyboard
 from pyautogui import *
 from datetime import datetime
+
+# ---------------------------------
+# VVV YOUR BOT TOKEN
+token='YOUR BOT TG TOKEN'
+# ---------------------------------
+
+logging.basicConfig(level=logging.INFO, filename="logs.log",filemode="w", format="%(asctime)s %(levelname)s %(message)s")
 rlgs = " "
 sysmode = 0
 alertmode = 0
-writemode = 0
-token='YOUR BOT TG TOKEN'
+writemode = 0
 bot=telebot.TeleBot(token)
 @bot.message_handler(content_types=['text'])
 def message_reply(message):
