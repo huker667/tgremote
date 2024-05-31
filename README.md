@@ -15,14 +15,6 @@ Commands:
 - `click` - Click in current position
 - `dclick` - Double click
 
-Warning:
-- Use this program for testing purposes only.
-- All responsibility lies with you.
-
-Information:
-- The program does not add itself to startup automatically.
-- The bot host is a computer for remote access.
-- You can compile files to .exe using auto-py-to-exe.
 > [!NOTE]
 > The bot host is a computer for remote access.
 
