@@ -1,0 +1,4 @@
+opencv-python
+telebot
+keyboard
+pyautogui
