@@ -11,6 +11,7 @@ Commands:
 - `kb_win_l` - Send "Win" + "L"
 - `sys_mode` - Switch terminal mode
 - `alert_mode` - Switch alert mode
+- `write_mode` - Switch text mode
 - `click` - Click in current position
 - `dclick` - Double click
 
